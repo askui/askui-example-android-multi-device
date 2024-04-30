@@ -25,7 +25,14 @@ ASKUI_TOKEN=<your_workspace_token>
 
 2. Configure your two Android devices with following Guide [Setup Real Android Devices](https://docs.askui.com/docs/general/Executing%20Automations/mobile-automation#set-up-a-real-android-device)
 
-3. Download the controller [Windows](https://files.askui.com/releases/askui-ui-controller/latest/win32/x64/askui-ui-controller.exe) | [Mac (Intel)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/x64/askui-ui-controller.dmg) | [Mac (ARM)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/arm64/askui-ui-controller.dmg ) | [Linux](https://files.askui.com/releases/askui-ui-controller/latest/linux/x64/askui-ui-controller.AppImage) and copy it to this project `askui-example-android-multiple-devices/askui-ui-controller.{exe,dmg,AppImage}`
+
+### Windows
+
+Nothing Todo. The AskUI Controller is available inside the AskUI Shell
+
+### Mac, Linuc
+
+3. *Note Mac, Linux only:* Download the controller [Mac (Intel)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/x64/askui-ui-controller.dmg) | [Mac (ARM)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/arm64/askui-ui-controller.dmg ) | [Linux](https://files.askui.com/releases/askui-ui-controller/latest/linux/x64/askui-ui-controller.AppImage) and copy it to this project `askui-example-android-multiple-devices/askui-ui-controller.{exe,dmg,AppImage}`
 
 __Note__: I continue as a Windows user and use the `askui-ui-controller.exe` 
 
@@ -40,6 +47,19 @@ emulator-5554 device product:sdk_google_phone_x86 model:Android_SDK_built_for_x8
 
 Now we have to open a terminal for each AskUI Controller and start it on different ports.
 
+### Windows
+```
+# Open AskUI Shell
+askui-shell
+
+# Start first AskUI Controller on Port 6769 for android device 0 (emulator-5556)
+ Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6769  
+
+# Start second AskUI Controller on Port 6869 for android device 1 (emulator-5554)
+ Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6869  
+```
+
+### Linux, Mac
 ```
 # Start first AskUI Controller on Port 6769 for android device 0 (emulator-5556)
 ./askui-ui-controller.exe -d 0 -m -r android -p 6769  
