@@ -30,7 +30,7 @@ ASKUI_TOKEN=<your_workspace_token>
 
 Nothing Todo. The AskUI Controller is available inside the AskUI Shell
 
-### Mac, Linuc
+### Mac, Linux
 
 3. *Note Mac, Linux only:* Download the controller [Mac (Intel)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/x64/askui-ui-controller.dmg) | [Mac (ARM)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/arm64/askui-ui-controller.dmg ) | [Linux](https://files.askui.com/releases/askui-ui-controller/latest/linux/x64/askui-ui-controller.AppImage) and copy it to this project `askui-example-android-multiple-devices/askui-ui-controller.{exe,dmg,AppImage}`
 
@@ -53,10 +53,10 @@ Now we have to open a terminal for each AskUI Controller and start it on differe
 askui-shell
 
 # Start first AskUI Controller on Port 6769 for android device 0 (emulator-5556)
- Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6769  
+Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6769  
 
 # Start second AskUI Controller on Port 6869 for android device 1 (emulator-5554)
- Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6869  
+Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6869  
 ```
 
 ### Linux, Mac
