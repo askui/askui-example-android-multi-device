@@ -34,8 +34,6 @@ Nothing Todo. The AskUI Controller is available inside the AskUI Shell
 
 3. *Note Mac, Linux only:* Download the controller [Mac (Intel)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/x64/askui-ui-controller.dmg) | [Mac (ARM)](https://files.askui.com/releases/askui-ui-controller/latest/darwin/arm64/askui-ui-controller.dmg ) | [Linux](https://files.askui.com/releases/askui-ui-controller/latest/linux/x64/askui-ui-controller.AppImage) and copy it to this project `askui-example-android-multiple-devices/askui-ui-controller.{exe,dmg,AppImage}`
 
-__Note__: I continue as a Windows user and use the `askui-ui-controller.exe` 
-
 ## Usage
 
 First we check if both Android devices are connected. This should look like:
