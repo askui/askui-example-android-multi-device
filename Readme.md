@@ -46,24 +46,36 @@ emulator-5554 device product:sdk_google_phone_x86 model:Android_SDK_built_for_x8
 Now we have to open a terminal for each AskUI Controller and start it on different ports.
 
 ### Windows
-```
+
+```bash
 # Open AskUI Shell
 askui-shell
 
 # Start first AskUI Controller on Port 6769 for android device 0 (emulator-5556)
-Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6769  
+AskUI-StartController -DisplayNum 0 -Runtime android -Port 6769
 
 # Start second AskUI Controller on Port 6869 for android device 1 (emulator-5554)
-Start-AskUIController -DisplayNum 0 -m -Runtime android -Port 6869  
+AskUI-StartController -DisplayNum 1 -Runtime android -Port 6869  
 ```
 
-### Linux, Mac
+### Linux
+
+```bash
+# Connects to the first device returned by 'adb devices'
+./askui-ui-controller.AppImage --host 0.0.0.0 -p 6769 -d 0 -m -r android
+
+# Connects to the second device returned by 'adb devices'
+./askui-ui-controller.AppImage --host 0.0.0.0 -p 6869 -d 1 -m -r android
 ```
+
+### macOS
+
+```bash
 # Start first AskUI Controller on Port 6769 for android device 0 (emulator-5556)
-./askui-ui-controller.exe -d 0 -m -r android -p 6769  
+./askui-ui-controller --host 0.0.0.0 -p 6769 -d 0 -m -r android
 
 # Start second AskUI Controller on Port 6869 for android device 1 (emulator-5554)
-./askui-ui-controller.exe -d 1 -m -r android -p 6869 
+./askui-ui-controller --host 0.0.0.0 -p 6869 -d 1 -m -r android
 ```
 
 Now both controllers should be connected to the device. 
