@@ -55,7 +55,7 @@ askui-shell
 AskUI-StartController -DisplayNum 0 -Runtime android -Port 6769
 
 # Start second AskUI Controller on Port 6869 for android device 1 (emulator-5554)
-AskUI-StartController -DisplayNum 1 -Runtime android -Port 6869  
+AskUI-StartController -DisplayNum 1 -Runtime android -Port 6869
 ```
 
 ### Linux
